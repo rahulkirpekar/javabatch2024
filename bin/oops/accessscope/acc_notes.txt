@@ -1,0 +1,94 @@
+			Modifiers
+			   |
+ --------------------------------------------------
+ |						|	
+Access Modifiers			Non-Access Modifiers
+
+--->private				--->static
+--->default				--->abstract
+--->protected				--->native
+--->public				--->synchronised
+					--->transient
+					--->final
+Access Modifiers:-
+-----------------
+
+
+private:- "Within class Only"
+---------
+	1) Class----X
+	2) Dm's---YES
+	3) Mf's---Yes
+	4) Constructor--YES
+
+default:- "Within Package"---folder
+----------
+
+
+	src
+	 |
+	  --pack1
+		Student
+			int rno;// default scope--->"Within package"
+
+		TestApp1
+			main()
+			{
+				Student s = new Student();
+				s.rno=1;
+			}
+
+	  --pack2
+		TestApp2
+	
+
+	1) Class----YES
+	2) Dm's---YES
+	3) Mf's---Yes
+	4) Constructor--YES
+
+protected:-
+----------
+	1) Class----X
+	2) Dm's---YES
+	3) Mf's---Yes
+	4) Constructor--X
+public:-
+----------
+	1) Class----YES
+	2) Dm's---YES
+	3) Mf's---Yes
+	4) Constructor--YES
+
+
+			******************************
+			  Access Modifiers in Java
+			******************************
+
+-------------------------------------------------------------------------------------------------
+		SAME-PACK	SAME PACK	SAME PACK	OutSidePack	OutSidePack	|	
+		SAME-CLASS	CHILD-CLASS	OtherClass	Otherclass	ChildClass	|
+-------------------------------------------------------------------------------------------------
+private		  YES		   NO		   NO		   NO		   NO 		|	
+--------------------------------------------------------------------------------------------------
+default		  YES		   YES		   YES		   NO		   NO		|
+------------------------------------------------------------------------------------------------
+protected	  YES		   YES		   YES 		   NO		   YES		|
+-------------------------------------------------------------------------------------------------
+public		  YES		   YES		   YES		   YES		   YES 		|	
+-------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

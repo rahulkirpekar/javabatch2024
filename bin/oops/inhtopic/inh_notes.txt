@@ -1,0 +1,46 @@
+Inheritance:- Code reusibility / To reduce code/logic duplication
+--------------
+			Type of Inheritance
+			-------------------
+				|
+				|
+		--------------------------------------->["interface"]
+		|					   |	
+	      class				Not Possible By class
+		|					   |	
+-----------------------------------------	  --------------------
+     |		     |		      |		     |		    |
+1) Single	2) MultiLevel	3) Hierarchical	4) Multiple 	5) Hybrid	
+     A(no1)		A(no1)		  A(no1)
+     |			|		B(no2) C(no3)
+     B(no2)		B(no2)		A obj;// no1
+			|		B obj;// no1,no2
+A obj;// no1		C(no3)		C obj;/ no1,no3
+B obj;// no1,no2|  A obj;// no1	
+		   B obj;// no1,no2
+		   C obj;// no1,no2,no3
+
+4) Multiple:-
+--------------
+	A(no1)	B(no1)
+	|	|
+	-----------
+	    |
+	    C(no2)
+
+	C obj;//
+	obj.no1=10;
+
+
+
+		 
+
+
+
+
+
+
+
+	
+
+	
