@@ -46,11 +46,13 @@ public class TestApp1
 	}
 	public static void main(String[] args) 
 	{
-		
 		TestApp1 obj = new TestApp1();
 		
 		obj.addFun('a','b');
 		
+		String name = "royal";
+		
+		boolean flag = name.contains("al");
 		
 //		obj.addFun('a','b');// char value----- [double,float]---float
 	}
