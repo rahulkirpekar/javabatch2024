@@ -1,0 +1,44 @@
+interface(pure abstraction):-
+------------------------------
+
+       optional
+          |
+public abstract interface A
+{
+	// 1) Dm's
+	int no = 100;// public static final 
+	
+	// 2) define methods
+
+		// 1) Abstract method---public abstract 
+		void test1();// 
+		
+		// 2) Non-abstract method
+			// 1) private method(java-9)
+			// 2) default method(java-8)
+			// 3) static method(java-8)
+}
+
+	class		interface	interface		class	
+	  |--extends	  |--extends	   |--implements	  |---(Not possible in Java)
+	class		interface	 class			interface
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

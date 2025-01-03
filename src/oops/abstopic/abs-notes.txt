@@ -1,0 +1,54 @@
+Abstraction:-
+------------
+	Activa---Driver---Hide---Engine
+	SbiBank--->login--->userName/Password-->Account Access	
+	Whatsapp--msg--->user1---->msg--->user2
+
+		Type of Abstraction
+		-------------------
+  0% to 100%			100% Abstraction
+------------------		------------------
+1) Abstract class		2) Interface
+-------------------------------------------------------------------
+1) Abstract class:-
+----------------------
+
+		A(A--test1(),A--test2(),A--test3())
+		|
+		B(test1(){..},A--test4(),A--test5())
+		|
+		C(test2(),test3(),test4(),test5())
+
+
+abstract class A
+{
+	// Dm's
+	// Mf's
+	// 1) Abstract method
+	abstract void test1();	
+	// 2) Non-Abstract method
+	void test2()
+	{
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

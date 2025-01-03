@@ -4,12 +4,13 @@
 		Vehicle(void getSpec(){ .. General Specification ..})
 		  |
  ----------------------------------------
- |		  |			|
+ |		 			 |				|
 TwVehicle      LmvVehicle	    HmvVehicle		
- |		  |			|
+ |		  			|				|
 getSpec()      getSpec()	    getSpec()
  |		  |			|
  |		  |		  getHmvModelInfo	
  |	     getLmvModelInfo()
 getTwModelInfo()
 
+no
