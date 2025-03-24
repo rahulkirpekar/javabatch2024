@@ -1,0 +1,99 @@
+Array Limitations:-
+-------------------
+	int a[] = new int[5];
+
+	1) SIZE		
+	2) TYPE	
+
+Collection Framework:-
+-----------------------
+			Hierarchy of Collection--[java.util.*]
+			------------------------
+
+				Iterable(I)--------------------------------------------------------------
+				   |									|						
+				Collection(I)								|
+				   |									|
+				   |(Data)---value							|--(Data)--[Key,value]
+				   |									|
+	---------------------------------------------------------					|	
+	|			   |				|					|
+     List(I)			 Set(I)			      Queue(I)				       Map--[Key,value]
+	|			   |				|					|
+--AbstractList(AC)         --AbstractSet(AC)		--AbstractQueue(AC)			    AbstractMap(AC)
+	|			   |				|					|
+    ArrayList(C)	      HashSet(C)		  PriorityQueue(C)			    HashMap(C)
+    Vector(C)		      LinkedHashSet(C)							    LinkedHashMap(C)
+    LinkedList(C)	      TreeSet(C)							    TreeMap(C)
+
+
+
+List(I)	Features:-
+-------------------
+
+	1) Store elements in Insertion Order.
+	2) Allows duplicates elements(values).
+	3) index based can access
+	4) can contain null values.
+	
+ArrayList Features:-
+--------------------
+	1) Store elements in Insertion Order.
+	2) Allows duplicates elements(values).
+	3) Random Access (Index-Based Access)
+	4) can contain null values.
+	5) Dynamiz Resizing
+	6) Ordered Collection
+	7) Non-Synchronized (Not Thread-Safe)
+	8) Fast Read Operations 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

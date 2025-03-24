@@ -1,0 +1,73 @@
+String(Multiple Characters)
+------------------------------
+	1) char Array
+	2) String(class)
+
+		Ways to operation on String Data
+		----------------------------------
+				|
+	--------------------------------------------------
+	|						|
+------------------				------------------
+1) ImmutableWay					2) MutableWay	
+------------------				------------------
+===>String(class)				===>StringBuilder(class)
+						===>StringBuffer(class)
+
+
+------------------------
+1) ImmutableWay(String)	
+
+
+	Two--Ways to create String objects:
+	***********************************
+
+	1) By String literals Way--[RAM--->"HEAP"--->"SCP"]
+	----------------------------------------------------
+
+	String name1 = "royal";
+	String name2 = "royal";
+	String name3 = "techno";
+	String name4 = name1;
+
+	String name5 = name1 +" " + name3;// royal techno	
+
+Object Equality:-
+----------------
+		-------------------		-------------------
+		1) By reference(==) 		2) By value(.equals())
+		-------------------		-------------------
+	SOP(name1==name2);// true		SOP(name1.equals(name2));// value	
+
+
+
+
+
+	2) By 'new' keyword way--[RAM--->"HEAP"]
+	------------------------
+
+		String name1 = new String("dps");
+		String name2 = new String("dps");
+
+		String name3 = name1 +" " + name3;// royal techno
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

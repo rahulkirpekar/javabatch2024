@@ -1,0 +1,102 @@
+Exception:- Abnormal things.
+----------
+	statement---1
+	statement---2
+	statement---3
+	statement---4
+	statement---5
+
+	int ans = 10 / 0;// raise exception
+
+	statement---6
+	statement---7
+	statement---8
+	statement---9
+	statement---10
+
+Type of Exception:-
+-------------------
+1) checked Exception / CompileTime ---compiler identify
+
+2) Unchecked Exception / Runtime ----raised by JVM
+
+
+		Hierarchy of Exception
+		--------------------------
+
+			Throwable
+			   |
+			Exception
+			   |
+	-----------------------------------------	
+	|checked				|--uchecked exception / Runtime Exception
+	|				    RuntimeException		
+--FileNotFoundException				|
+--SQLException				--ArithmeticException	
+--ClassNotFoundException		--NullpinterException
+		--...					--StringIndexOutofBoundException
+								--ArrayIndexoutofBoundException
+								--NumberformateException
+								--ClasscastException
+								--....
+
+
+Finally Block:-
+---------------
+
+	try
+	{
+		// raise exception by code
+	}catch()
+	{
+		// to handle exception
+	}finally
+	{
+		// compul...execute code  close connection
+	}
+------------------------------------------------------------------------------------------------------------
+
+1) throw---raise user defined exception for user defined Scenario
+2) throws
+3) custom exception
+4) method overrdding with exception
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

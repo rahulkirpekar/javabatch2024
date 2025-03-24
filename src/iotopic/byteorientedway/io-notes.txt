@@ -1,0 +1,15 @@
+I - InputStream(read)--(console/file/socket)
+O - OutputStream(write)--(console/file/socket)
+-------------------------------------------------------------
+
+1) Byte orientedway		2) Char orientedway
+-----------------------		-----------------------
+
+String--Data--Byte			===>FileWriter(write)
+					===>FileReader(read)
+	===>FileOutputStream(write)
+
+	data---byte-->write---Text-file
+
+		
+	===>FileInputStream(read)
