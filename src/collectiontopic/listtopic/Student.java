@@ -32,6 +32,10 @@ public class Student
 	public void setStd(int std) {
 		this.std = std;
 	}
+	
+	
+	
+	
 	public void disp() 
 	{
 		System.out.println(rno+" " + name+" " + std);
