@@ -102,7 +102,6 @@ public class StudentManagementApplication
 							System.out.println(name+ " is not found in student records.");
 						}
 						break;
-						
 				case 4:
 						System.out.println("Rno\tName\tStd");
 						for (i = 0; i < list.size(); i++) 
