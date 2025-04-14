@@ -1,0 +1,11 @@
+JDBC---Java to Database Connectivity.
+-------------------------------------
+
+	Java Program-----[connect]------->Database(MySql)
+
+	    Driver.class       Driver.class    Driver.class    Driver.class	
+		 |		  |		   |		   |	
+     mysql-coonnector.jar	odbc.jar         *.jar		  *.jar
+		 |		  |		   |		   |	
+		MySql		Oracle		PostGress	MsSqlServer
+

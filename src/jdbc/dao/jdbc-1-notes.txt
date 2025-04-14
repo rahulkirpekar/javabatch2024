@@ -1,0 +1,40 @@
+
+CREATE TABLE student
+(
+	rno int PRIMARY KEY AUTO_INCREMENT,
+	name varchar(50),
+	std int,
+	marks int
+);
+
+DAO--(Data Access Object)
+
+StudentDao(class)------(Student Table)
+
+  insertStudent()
+  updateStudent()
+  deleteStudent()
+  getAllStudentRecords()
+ 
+
+
+1) Statement(I):-
+-----------------------
+		     Statement(I)
+			|
+		---------------------
+		  |		  |
+	    executeUpdate()   execuetQuery()---Multiple Rows--ResultSet
+		  |		  |
+		insert		select
+		update 
+		delete
+
+2) PreparedStatement(I):-
+-------------------------
+
+	    executeUpdate()   execuetQuery()---Multiple Rows--ResultSet
+		  |		  |
+		insert		select
+		update 
+		delete
