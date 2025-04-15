@@ -5,17 +5,18 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
+import jdbc.bean.StudentBean;
 import jdbc.util.DBConnection;
 
 // StudentDao---Student Table
 public class StudentDao 
 {
 	// Insert Query
-	public int insertStudent(String name,int std,int marks) 
+	public int insertStudent(StudentBean sbean) 
 	{
 		int rowsAffected = 0;
 		// 1) create SQL query
-		String insertQuery = "INSERT INTO student(name,std,marks) VALUES ('"+ name +"',"+std+","+marks+")";
+		String insertQuery = "INSERT INTO student(name,std,marks) VALUES ('"+ sbean.getName() +"',"+ sbean.getStd()+","+sbean.getMarks()+")";
 		
 		System.out.println("insertQuery :" + insertQuery) ;
 		
@@ -69,12 +70,13 @@ public class StudentDao
 		System.out.println("Enter Marks : ");
 		int marks = sc.nextInt();
 		
+		StudentBean sbean = new StudentBean(0, name, std, marks);
 		
 		int rowsAffected = 0 ;
 		
 		StudentDao studentDao = new StudentDao();
 		
-		rowsAffected = studentDao.insertStudent(name,std,marks);
+		rowsAffected = studentDao.insertStudent(sbean);
 		
 		if (rowsAffected > 0 )
 		{
