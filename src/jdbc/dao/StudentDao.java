@@ -3,6 +3,7 @@ package jdbc.dao;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Scanner;
 
 import jdbc.util.DBConnection;
 
@@ -10,11 +11,13 @@ import jdbc.util.DBConnection;
 public class StudentDao 
 {
 	// Insert Query
-	public int insertStudent() 
+	public int insertStudent(String name,int std,int marks) 
 	{
 		int rowsAffected = 0;
 		// 1) create SQL query
-		String insertQuery = "INSERT INTO student(name,std,marks) VALUES ('krishna',8,70)";
+		String insertQuery = "INSERT INTO student(name,std,marks) VALUES ('"+ name +"',"+std+","+marks+")";
+		
+		System.out.println("insertQuery :" + insertQuery) ;
 		
 		// 2) get Db Connection
 		Connection conn = DBConnection.getConnection();
@@ -57,11 +60,21 @@ public class StudentDao
 	}
 	public static void main(String[] args) 
 	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter Name : ");
+		String name = sc.nextLine();
+		System.out.println("Enter Std : ");
+		int std = sc.nextInt();
+		System.out.println("Enter Marks : ");
+		int marks = sc.nextInt();
+		
+		
 		int rowsAffected = 0 ;
 		
 		StudentDao studentDao = new StudentDao();
 		
-		rowsAffected = studentDao.insertStudent();
+		rowsAffected = studentDao.insertStudent(name,std,marks);
 		
 		if (rowsAffected > 0 )
 		{
