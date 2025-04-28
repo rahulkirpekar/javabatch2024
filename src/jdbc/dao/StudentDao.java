@@ -1,8 +1,10 @@
 package jdbc.dao;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import jdbc.bean.StudentBean;
@@ -45,11 +47,14 @@ public class StudentDao
 		return rowsAffected;
 	}
 	// Update Query
+	
+	
 	public int updateStudent(StudentBean sbean ,int rno) 
 	{
 		String updateQuery = "UPDATE student SET name='"+sbean.getName()+"' , std="+sbean.getStd()+" , marks="+sbean.getMarks()+"  WHERE rno = "+rno;
 		System.out.println("updateQuery : " + updateQuery);
 		Connection conn = DBConnection.getConnection();
+		
 		Statement stmt = null;
 		int rowsAffected = 0 ;
 		if (conn!=null) 
@@ -95,14 +100,59 @@ public class StudentDao
 		return rowsAffected;
 	}
 	// Select Query
-	public void getAllStudentRecords() 
+	public ArrayList<StudentBean> getAllStudentRecords() 
 	{
+		String selectQuery = "select rno,name,std,marks from student";
+		ResultSet rs = null;
+		Connection conn = DBConnection.getConnection();
+		Statement stmt = null;
+		StudentBean sbean = null;
+		ArrayList<StudentBean> list = new ArrayList<>();
+		if (conn!=null) 
+		{
+			try 
+			{
+				stmt = conn.createStatement();
+				rs = stmt.executeQuery(selectQuery);
+				while(rs.next()) 
+				{
+					int rno = rs.getInt(1);//rs.getInt("rno");
+					String name = rs.getString(2);//rs.getString("name");
+					int std = rs.getInt(3);//rs.getInt("std");
+					int marks = rs.getInt(4);//rs.getInt("marks");
 
+					sbean =  new StudentBean(rno, name, std, marks);
+					
+					list.add(sbean);
+//					System.out.println(rno+" " + name+" " + std +" " + marks);	
+				}
+			} catch (SQLException e) 
+			{
+				e.printStackTrace();
+			}
+		} else 
+		{
+			System.out.println("StudentDao--getAllStudentRecords() Db not connected");
+		}
+		return list;
 	}
 	public static void main(String[] args) 
 	{
-		Scanner sc = new Scanner(System.in);
+		StudentDao dao = new StudentDao();
+		
+		ArrayList<StudentBean> list = dao.getAllStudentRecords();
+		
+		for (int i = 0; i < list.size(); i++) 
+		{
+			StudentBean s = list.get(i);
+			
+			System.out.println(s.getRno()+" " + s.getName()+" " + s.getStd()+" " + s.getMarks());
+		}
+		
+		
+/*		
 //		----------UPDATE Query-------------------------	
+		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Rno which you want to Update : ");
 		int rno = sc.nextInt();
 		sc.nextLine();
@@ -131,7 +181,6 @@ public class StudentDao
 		
 		
 		
-		/*		
 		 * 
 		 * ----------DELETE Query-------------------------	
 		System.out.println("Enter Rno wwhich you want to remove : ");
